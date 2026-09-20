@@ -16,7 +16,7 @@ def perform_switch_case(state, t, turn):
     if state == "UP_1":
         t.forward(10)  # Движение
 
-        if y >= 0:
+        if y >= 4:
             state = "LEFT_1"
             t.setheading(180)  # Поворот влево
             return state, turn
@@ -24,7 +24,7 @@ def perform_switch_case(state, t, turn):
     if state == "LEFT_1":
         t.forward(10)  # Движение
 
-        if x <= 0:
+        if x <= -4:
             state = "DOWN_1"
             t.setheading(270)  # Поворот вниз
             return state, turn
@@ -32,7 +32,7 @@ def perform_switch_case(state, t, turn):
     if state == "DOWN_1":
         t.forward(10)  # Движение
 
-        if y <= -4:
+        if y <= 0:
             state = "RIGHT_1"
             t.setheading(0)  # Поворот вправо
             return state, turn
@@ -40,7 +40,7 @@ def perform_switch_case(state, t, turn):
     if state == "RIGHT_1":
         t.forward(10)  # Движение
 
-        if x >= 3:
+        if x >= -1:
             state = "UP_2"
             t.setheading(90)  # Поворот вверх
             return state, turn
@@ -48,7 +48,7 @@ def perform_switch_case(state, t, turn):
     if state == "UP_2":
         t.forward(10)  # Движение
 
-        if y >= -1:
+        if y >= 3:
             state = "LEFT_2"
             t.setheading(180)  # Поворот влево
             return state, turn
@@ -56,7 +56,7 @@ def perform_switch_case(state, t, turn):
     if state == "LEFT_2":
         t.forward(10)  # Движение
 
-        if x <= 1:
+        if x <= -3:
             state = "DOWN_2"
             t.setheading(270)  # Поворот вниз
             return state, turn
@@ -64,7 +64,7 @@ def perform_switch_case(state, t, turn):
     if state == "DOWN_2":
         t.forward(10)  # Движение
 
-        if y <= -3:
+        if y <= 1:
             state = "RIGHT_2"
             t.setheading(0)  # Поворот вправо
             return state, turn
@@ -72,7 +72,7 @@ def perform_switch_case(state, t, turn):
     if state == "RIGHT_2":
         t.forward(10)  # Движение
 
-        if x >= 2:
+        if x >= -2:
             state = "UP_3"
             t.setheading(90)  # Поворот вверх
             return state, turn
@@ -80,7 +80,7 @@ def perform_switch_case(state, t, turn):
     if state == "UP_3":
         t.forward(10)  # Движение
 
-        if y >= -2:
+        if y >= 2:
             state = "STOP"
             return state, turn
         return state, turn
